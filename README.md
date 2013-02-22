@@ -1,4 +1,3 @@
-
 BenCoding.iOSTools
 
 This module contains a collection of tools designed to make working with Titanium on iOS even easier.
@@ -9,7 +8,7 @@ This module contains a collection of tools designed to make working with Titaniu
 
 <h2>Download the release</h2>
 
-There is two ways you can download this module. The go to the [dist](https://github.com/benbahrenburg/Securely/tree/master/iOS/dist) folder. This will have a release compiled for anyone download it from github.
+There is two ways you can download this module. The go to the [dist](https://github.com/benbahrenburg/benCoding.iOS.Tools/tree/master/dist) folder. This will have a release compiled for anyone download it from github.
 
 
 <h2>Building from source?</h2>
@@ -28,32 +27,31 @@ var tools = require('bencoding.ios.tools');
 Ti.API.info("module is => " + tools);
 </code></pre>
 
-<h2>Creating the Properties Object</h2>
-
-Requiring the module into your project
-
 <h2>AppStoreHelpers</h2>
 The AppStoreHelpers object provides tools to help work with the Apple AppStore.
 
 <h2>Methods</h2>
 
 <b>versionCheck</b>( String iTunesID, Callback<Object> callback )
-The versionCheck method provides the ability to query the AppStore and return the latest version information for a provide iTunes ID.
+<p>The versionCheck method provides the ability to query the AppStore and return the latest version information for a provide iTunes ID.</p>
+
 
 <b>Parameters</b>
-iTunesID : String
+* iTunesID : String
 The iTunes Id for the App.
-callback : Callback<Object>
+* callback : Callback<Object>
 Callback function to invoke when completed
 
 <b>Returns</b>
-N/A
+* None
 
 <b>Example</b>
 <pre><code>
 var tools = require('bencoding.ios.tools');
 var appStoreHelpers = tools.createAppStoreHelpers();
+</code></pre>
 
+<pre><code>
 function queryResults(e){
 	
 	Ti.API.info(JSON.stringify(e));
@@ -63,8 +61,9 @@ function queryResults(e){
 	Ti.API.info("appID = " + e.appID);
 	Ti.API.info("code = " + e.code);
 	Ti.API.info("installedVersion = " + e.installedVersion);
-	
-	if((parseFloat(e.installedVersion) < parseFloat(e.appStoreVersion))){
+	var hasUpdate = (parseFloat(e.appStoreVersion) > parseFloat(e.installedVersion));
+			
+	if(hasUpdate){
 		var alert = Ti.UI.createAlertDialog({
 			title:'Update now', 
 			message:'There is a new version available. Do you want to download now?',
@@ -79,24 +78,27 @@ function queryResults(e){
 		alert.show();
 	}
 };
+</code></pre>
 
+<pre><code>
 //Let's assume we are angry birds
 var queryITunesID = '409807569';
 //Call the check version method
 appStoreHelpers.versionCheck(queryITunesID,queryResults);
+
 </code></pre>
 
 ----
 
 <b>launch</b>( String iTunesID)
-Launches the AppStore for a provided iTunes Id
+<p>Launches the AppStore for a provided iTunes Id</p>
 
 <b>Parameters</b>
-iTunesID : String
+* iTunesID : String
 The iTunes Id for the App.
 
 <b>Returns</b>
-N/A
+* None
 
 <b>Example</b>
 <pre><code>
