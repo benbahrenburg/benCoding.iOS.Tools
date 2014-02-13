@@ -30,6 +30,8 @@
 		437FC52516D3282500C8C186 /* BencodingIosToolsAppStoreHelpersProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 437FC52316D3282500C8C186 /* BencodingIosToolsAppStoreHelpersProxy.m */; };
 		437FC52F16D32BA400C8C186 /* BencodingIosToolsFontsProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 437FC52D16D32BA400C8C186 /* BencodingIosToolsFontsProxy.h */; };
 		437FC53016D32BA400C8C186 /* BencodingIosToolsFontsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 437FC52E16D32BA400C8C186 /* BencodingIosToolsFontsProxy.m */; };
+		43B5D1D218AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B5D1D018AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.h */; };
+		43B5D1D318AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5D1D118AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* BencodingIosTools_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* BencodingIosTools_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		437FC52316D3282500C8C186 /* BencodingIosToolsAppStoreHelpersProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingIosToolsAppStoreHelpersProxy.m; path = Classes/BencodingIosToolsAppStoreHelpersProxy.m; sourceTree = "<group>"; };
 		437FC52D16D32BA400C8C186 /* BencodingIosToolsFontsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingIosToolsFontsProxy.h; path = Classes/BencodingIosToolsFontsProxy.h; sourceTree = "<group>"; };
 		437FC52E16D32BA400C8C186 /* BencodingIosToolsFontsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingIosToolsFontsProxy.m; path = Classes/BencodingIosToolsFontsProxy.m; sourceTree = "<group>"; };
+		43B5D1D018AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingIosToolsBackgroundingProxy.h; path = Classes/BencodingIosToolsBackgroundingProxy.h; sourceTree = "<group>"; };
+		43B5D1D118AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingIosToolsBackgroundingProxy.m; path = Classes/BencodingIosToolsBackgroundingProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* BencodingIosTools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BencodingIosTools_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libBencodingIosTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBencodingIosTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				24DE9E0F11C5FE74003F90F6 /* BencodingIosToolsModuleAssets.h */,
+				43B5D1D018AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.h */,
+				43B5D1D118AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.m */,
 				24DE9E1011C5FE74003F90F6 /* BencodingIosToolsModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* BencodingIosToolsModule.h */,
 				24DD6CF81134B3F500162E58 /* BencodingIosToolsModule.m */,
@@ -131,6 +137,7 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* BencodingIosTools_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* BencodingIosToolsModule.h in Headers */,
+				43B5D1D218AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* BencodingIosToolsModuleAssets.h in Headers */,
 				437FC52416D3282500C8C186 /* BencodingIosToolsAppStoreHelpersProxy.h in Headers */,
 				437FC52F16D32BA400C8C186 /* BencodingIosToolsFontsProxy.h in Headers */,
@@ -162,6 +169,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "iOSTools" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -208,6 +217,7 @@
 				24DE9E1211C5FE74003F90F6 /* BencodingIosToolsModuleAssets.m in Sources */,
 				437FC52516D3282500C8C186 /* BencodingIosToolsAppStoreHelpersProxy.m in Sources */,
 				437FC53016D32BA400C8C186 /* BencodingIosToolsFontsProxy.m in Sources */,
+				43B5D1D318AD6983008BD32A /* BencodingIosToolsBackgroundingProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
