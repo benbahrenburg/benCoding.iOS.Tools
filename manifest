@@ -2,8 +2,9 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.2
+version: 0.3
 apiversion: 2
+architectures: armv7 i386 x86_64 arm64
 description: Tools to make working with Titanium on iOS easier
 author: Ben Bahrenburg 
 license: Apache 2.0
@@ -15,4 +16,4 @@ name: iOSTools
 moduleid: bencoding.ios.tools
 guid: 17e885ba-402d-4a09-8370-e547d3e29c49
 platform: iphone
-minsdk: 3.0.0.GA
+minsdk: 3.5.1.GA
